@@ -1,25 +1,27 @@
 {
     "manifest_version": 2,
-    
-    "name": "Plugin",
+
+    "name": "Mouse Tracker",
     "description": "This is my first chrome extension",
     "version": "1.0",
-    
+
     "permissions":[
         "tabs",
         "<all_urls>"
     ],
-    
+
     "background": {
     "scripts": ["jquery-1.12.1.min.js","background.js"],
     "persistent": true
   },
-    
+
     "browser_action":{
         "default_title": "Click here",
         "default_popup": "1.html"
     },
-    
+
+    "options_page": "options.html",
+
     "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -27,7 +29,7 @@
       "run_at": "document_end"
     }
   ]
-    
-    
+
+
 
 }
