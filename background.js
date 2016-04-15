@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
     current_url = sender.tab.url;
     info = String(request.mouse_log).trim() + '\t' + "SITE=" + current_url + '\n';
     site = String(request.site_);
-    if(site != ""){
+    if(site == "10.129.248.54"){
         localStorage.site = site;
     }
     port = String(request.port_);
